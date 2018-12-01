@@ -18,31 +18,31 @@ def loop(result, value = value, yay = yay):
             la = dab[a][1:]
             ma = int(float(la))
             result += ma
-            if result in resultarray:
-                print("AAAAAAAAA")
+            if result in s:
                 value += result
                 yay += 1
-                return "DINGDINGDING: " + str(result)
+                print(value)
+                return str(value)
             if result not in s:
-                resultarray.append(result)
+                s.add(result)
 
         elif "-" in dab[a]:
             al = dab[a][1:]
             wa = int(float(al))
-            print(wa)
-            print(result)
             result -= wa
-            if result in resultarray:
-                print("AAAAAAA")
+            if result in s:
                 value += result
                 yay += 1
-                return "DINGDINGDING: " + str(result)
+                print(value)
+                return str(value)
             if result not in s:
-                resultarray.append(result)
+                s.add(result)
     return result
 
 for f in range(0, 100000):
-    result = loop(result)
-    print(value)
-    if yay is not 0:
+    if yay is 0:
+        result = loop(result)
+    else:
+        print(value)
         break
+
