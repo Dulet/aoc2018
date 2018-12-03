@@ -1,4 +1,4 @@
-f = open("input.txt", 'r')
+f = open("input/day1.txt", 'r')
 array = f.readlines()
 dab = []
 for line in array:
@@ -38,6 +38,7 @@ def loop(result, value = value, yay = yay):
             if result not in s:
                 s.add(result)
     return result
+
 
 for f in range(0, 100000):
     if yay is 0:
